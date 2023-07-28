@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Levelup</title>
+</head>
+
+<body>
+    <div class="intro">
+        <h1 class="logo-header">
+        <span class="logo">Level</span><span class="logo">Up..</span>
+       
+        
+        </h1>
+        
+         </div>
+    <!--  -->
+    <header>
+        <h1>Levelup</h1>
+
+        <section class="menu">
+            <ul class="menu-list">
+                <li>Home</li>
+                <li class="active">Products</li>
+                <li>About Us</li>
+                <li>Contact</li>
+            </ul>
+
+            <button>
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
+            </button>
+        </section>
+    </header>
+
+    <section class="main">
+
+        <section class="left">
+            <p class="title">INTERVIEW WARMUP!</p>
+            <p class="msg" style="font-weight: bold;">Get Ready To Achieve Your Goal With LevelUp.Make your way down a Path and build specific skills that will help you land an amazing job.</p>
+           <a href="login3.html"> <button class="cta">Lets start</button></a>
+        </section>
+
+        <section class="right">
+            <!--  -->
+            <div class="wrapper">
+                <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
+                <ul class="carousel">
+                  <li class="card" style="background-color: #7952b3;">
+                    <div class="img" style="background-color: white;"><img src="images/full-stack-java-developer.png" alt="img" draggable="false"></div>
+                    <h2 style="color: white;">FullStack-java</h2>
+                    <span></span>
+                  </li>
+                  <li class="card"  style="background-color: #7952b3;">
+                    <div class="img" style="background-color: white;"><img src="images/full-stack-web-pythn.png" alt="img" draggable="false"></div>
+                    <h2 style="color: white;">Fullstack-Python</h2>
+                    <span></span>
+                  </li>
+                  <li class="card"  style="background-color: #7952b3;">
+                    <div class="img"><img src="images/flat-design-devops-illustration_23-2149364438.avif" alt="img" draggable="false"></div>
+                    <h2 style="color: white;">DevOps</h2>
+                    <span></span>
+                  </li>
+                  <li class="card" style="background-color: #7952b3;">
+                    <div class="img"  ><img src="images/data-engineering-outline-vector-icon-260nw-1669249003.webp" alt="img" draggable="false"></div>
+                    <h2 style="color: white;">Data-Engineering</h2>
+                    <span></span>
+                  </li>
+                  <li class="card" style="background-color: #7952b3;">
+                    <div class="img" style="background-color: white;"><img src="images/189-1890020_google-cloud-.png" alt="img" draggable="false"></div>
+                    <h2 style="color: white;">Cloud-Engineering</h2>
+                    <span></span>
+                  </li>
+                  <li class="card" style="background-color: #7952b3;">
+                    <div class="img"><img src="images/2023-03-23-03-44-Image-1-Azure-DevOps.png" alt="img" draggable="false"></div>
+                    <h2 style="color: white;">Azure DevOps</h2>
+                    <span></span>
+                  </li>
+                </ul>
+                <!-- <i id="right" class="fa-solid fa-angle-right"></i> -->
+              </div>
+              <Script>
+                  const wrapper = document.querySelector(".wrapper");
+          const carousel = document.querySelector(".carousel");
+          const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+          const arrowBtns = document.querySelectorAll(".wrapper i");
+          const carouselChildrens = [...carousel.children];
+          
+          let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+          
+          // Get the number of cards that can fit in the carousel at once
+          let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+          
+          // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+          carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+              carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+          });
+          
+          // Insert copies of the first few cards to end of carousel for infinite scrolling
+          carouselChildrens.slice(0, cardPerView).forEach(card => {
+              carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+          });
+          
+          // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+          
+          // Add event listeners for the arrow buttons to scroll the carousel left and right
+          arrowBtns.forEach(btn => {
+              btn.addEventListener("click", () => {
+                  carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+              });
+          });
+          
+          const dragStart = (e) => {
+              isDragging = true;
+              carousel.classList.add("dragging");
+              // Records the initial cursor and scroll position of the carousel
+              startX = e.pageX;
+              startScrollLeft = carousel.scrollLeft;
+          }
+          
+          const dragging = (e) => {
+              if(!isDragging) return; // if isDragging is false return from here
+              // Updates the scroll position of the carousel based on the cursor movement
+              carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+          }
+          
+          const dragStop = () => {
+              isDragging = false;
+              carousel.classList.remove("dragging");
+          }
+          
+          const infiniteScroll = () => {
+              // If the carousel is at the beginning, scroll to the end
+              if(carousel.scrollLeft === 0) {
+                  carousel.classList.add("no-transition");
+                  carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+                  carousel.classList.remove("no-transition");
+              }
+              // If the carousel is at the end, scroll to the beginning
+              else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+                  carousel.classList.add("no-transition");
+                  carousel.scrollLeft = carousel.offsetWidth;
+                  carousel.classList.remove("no-transition");
+              }
+          
+              // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+              clearTimeout(timeoutId);
+              if(!wrapper.matches(":hover")) autoPlay();
+          }
+          
+          const autoPlay = () => {
+              if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+              // Autoplay the carousel after every 2500 ms
+              timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+          }
+          autoPlay();
+          
+          carousel.addEventListener("mousedown", dragStart);
+          carousel.addEventListener("mousemove", dragging);
+          document.addEventListener("mouseup", dragStop);
+          carousel.addEventListener("scroll", infiniteScroll);
+          wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+          wrapper.addEventListener("mouseleave", autoPlay);
+              </Script>
+          <!--  -->
+
+    </section>
+
+    <script>
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu button');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('opened')
+        })
+    </script>
+    <script>
+        let intro = document.querySelector('.intro');
+let logo = document.querySelector('.logo-header');
+let logoSpan = document.querySelectorAll('.logo');
+
+window.addEventListener('DOMContentLoaded',()=>{
+    setTimeout(()=>{
+        logoSpan.forEach((span, idx)=>{
+            setTimeout(()=>{
+                span.classList.add('active')
+            },(idx + 1) * 400)
+        });
+
+        setTimeout(()=>{
+            logoSpan.forEach((span, idx)=>{
+                setTimeout(()=>{
+                    span.classList.remove('active');
+                    span.classList.add('fade');
+                },(idx + 1) * 50)
+            })
+        },2000);
+        setTimeout(()=>{
+            intro.style.top = '-100vh';
+        },2300)
+    })
+})
+    </script>
+
+
+</body>
+
+</html>

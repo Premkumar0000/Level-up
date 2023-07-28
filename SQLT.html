@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lEVELUP</title>
+    <!-- bootstrap 5 css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="SQLT.css">
+    <script src="https://kit.fontawesome.com/51ef45e87a.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+  
+  <!--  -->
+    
+    
+    <!-- sidebar -->
+    <nav class="navbar navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5">
+            <div class="display-5 font-weight-bold">Tools</div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item w-100">
+                <a href="nav.html" class="nav-link text-light pl-4">About</a>
+            </li>
+            <!-- <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light pl-4">Courses</a> 
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light pl-4">Contact</a>
+            </li> -->
+            <li class="nav-item dropdown w-100">
+                <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Interview-questions</a>
+                <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <li><a href="HTMLQ.html" class="dropdown-item text-light pl-4 p-2">HTML</a></li>
+                    <li><a href="CSSQ.html" class="dropdown-item text-light pl-4 p-2">CSS</a></li>
+                    <li><a href="JSQ.html" class="dropdown-item text-light pl-4 p-2">JAVASCRIPT</a></li>
+                    <li><a href="BOOTQ.html" class="dropdown-item text-light pl-4 p-2">BOOTSTRAP</a></li>
+                    <li><a href="REACTQ.html" class="dropdown-item text-light pl-4 p-2">REACT-JS</a></li>
+                    <li><a href="SQLQ.html" class="dropdown-item text-light pl-4 p-2">SQL</a></li>
+                    <li><a href="MONGOQ.html" class="dropdown-item text-light pl-4 p-2">MONGO-DB</a></li>
+                    <li><a href="JAVAQ.html" class="dropdown-item text-light pl-4 p-2">JAVA</a></li>
+                    
+                </ul>
+                <li class="nav-item w-100">
+                  <a href="BASIC.html" class="nav-link text-light pl-4">Basic-questions</a> 
+              </li>
+            </li>
+            <li class="nav-item dropdown w-100">
+                <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Online-Test</a>
+                <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <li><a href="HTMLT.html" class="dropdown-item text-light pl-4 p-2">HTML</a></li>
+                    <li><a href="CSST.html" class="dropdown-item text-light pl-4 p-2">CSS</a></li>
+                    <li><a href="JST.html" class="dropdown-item text-light pl-4 p-2">JAVASCRIPT</a></li>
+                    <li><a href="BOOTT.html" class="dropdown-item text-light pl-4 p-2">BOOTSTRAP</a></li>
+                    <li><a href="REACTT.html" class="dropdown-item text-light pl-4 p-2">REACT-JS</a></li>
+                    <li><a href="SQLT.html" class="dropdown-item text-light pl-4 p-2">SQL</a></li>
+                    <li><a href="MONGODBT.html" class="dropdown-item text-light pl-4 p-2">MONGO-DB</a></li>
+                    <li><a href="JAVAT.html" class="dropdown-item text-light pl-4 p-2">JAVA</a></li>
+                    
+                </ul>
+            </li>
+            <li class="nav-item w-100">
+              <a href="Online_q.html" class="nav-link text-light pl-4">Online_QUIZ</a> 
+          </li>
+            <li class="nav-item w-100">
+                <a href="BOOKS.html" class="nav-link text-light pl-4">Library</a>
+            </li>
+        </ul>
+    </nav>
+    <!--  -->
+    <header>
+      <h1>Levelup</h1>
+
+      <section class="menu">
+          <ul class="menu-list">
+              <li><h5><a href="demo2.html" style="text-decoration: none; color: red;">Logout</a></h5></li>
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+          </ul>
+
+          <button>
+              <i class="fas fa-times"></i>
+              <i class="fas fa-bars"></i>
+          </button>
+      </section>
+  </header>
+    <!-- <h1 style="color: white; background-color: #7952b3; text-align: center;">Levelup<a href="#" class="btn btn-" id="join2">Logout</a></h1> -->
+    <!-- <center> <img src="images/black.png" alt="" srcset="" width="13%"></center> -->
+    <!--  -->
+    <section class="p-4 my-container" >
+        <button class="btn my-4" id="menu-btn">MENU</button>
+        <!-- <h1>ABOUT</h1> -->
+       
+        <!--  -->
+        <!-- questions -->
+        <div class="card">
+            <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title">SQL-TEST <br>
+                <img src="images/sql test.gif" alt="" width="23%"></h4>
+                <p class="card-text"><!DOCTYPE html>
+                    <html>
+                    <head>
+                      <title>Question and Answer Test</title>
+                      <script>
+                        function checkAnswer(questionNumber) {
+                          var selectedOption = document.querySelector('input[name="option'+questionNumber+'"]:checked');
+                          var result = document.getElementById("result"+questionNumber);
+                          
+                          if (selectedOption && selectedOption.value === "correct") {
+                            result.textContent = "Correct!";
+                            result.style.color = "green";
+                            // result.style.font-weight = "bold";
+
+                          } else {
+                            result.textContent = "Wrong answer.";
+                            result.style.color = "red";
+                          }
+                        }
+                      </script>
+                    </head>
+                    <body>
+                      <!-- <h1>Question and Answer Test</h1> -->
+                      
+                      <div>
+                        <h3>1.Which SQL statement is used to retrieve data from a database?</h3>
+                        
+                        <h5> <input type="radio" name="option1" value="option1" id="boom">&nbsp;&nbsp;INSERT<br></h5>
+                        <h5> <input type="radio" name="option1" value="option2">&nbsp;&nbsp;UPDATE<br></h5>
+                        <h5><input type="radio" name="option1" value="option3">&nbsp;&nbsp;DELETE<br></h5>
+                        <h5> <input type="radio" name="option1" value="correct">&nbsp;&nbsp;SELECT<br></h5>
+                        
+                        <!-- <button  >Submit</button> -->
+                        
+                        <p id="result1" style="font-weight: bold; font-size:x-large;"></p>
+                        
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(1)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5 >option:4 <br>SELECT SQL statement is used to retrieve data from a database</h5></p>
+                        </details><hr>
+                        
+                       
+                      </div>
+                      
+                      <div>
+                        <h3> 2.Which SQL command is used to create a table in a database?</h3>
+                        
+                       <h5> <input type="radio" name="option2" value="correct">&nbsp;&nbsp;CREATE<br></h5>
+                       <h5> <input type="radio" name="option2" value="option1">&nbsp;&nbsp;ALERT<br></h5>
+                       <h5><input type="radio" name="option2" value="option2">&nbsp;&nbsp;UPDATE<br></h5> 
+                        <h5><input type="radio" name="option2" value="option3">&nbsp;&nbsp;DROP<br></h5>
+                        <p id="result2" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(2)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>Option:1 <br>CREATE command is used to create a table in a database</h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      
+                      <div>
+                        <h3>3.Which SQL clause is used to filter records based on a condition?</h3>
+                        
+                        <h5><input type="radio" name="option3" value="option1">&nbsp;&nbsp;HAVING<br></h5>
+                       
+                        <h5>  <input type="radio" name="option3" value="correct">&nbsp;&nbsp;WHERE<br></h5>
+                        <h5> <input type="radio" name="option3" value="option2">&nbsp;&nbsp;GROUPBY<br></h5>
+                        <h5> <input type="radio" name="option3" value="option3">&nbsp;&nbsp;ORDERBY<br></h5>
+                        <p id="result3" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(3)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(3)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>Option:2 <br>WHERE clause is used to filter records based on a condition</h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 4.Which SQL command is used to modify existing data in a table?</h3>
+                        
+                       <h5> <input type="radio" name="option4" value="option1">&nbsp;&nbsp;ALTER<br></h5>
+                       <h5> <input type="radio" name="option4" value="option2">&nbsp;&nbsp;DELETE<br></h5>
+                       <h5><input type="radio" name="option4" value="correct">&nbsp;&nbsp;UPDATE<br></h5> 
+                        <h5><input type="radio" name="option4" value="option3">&nbsp;&nbsp;DROP<br></h5>
+                        <p id="result4" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(4)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:3 <br>UPDATE command is used to modify existing data in a table </h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 5.Which SQL statement is used to add new data to a table?</h3>
+                        
+                       <h5> <input type="radio" name="option5" value="option1">&nbsp;&nbsp;CREATE<br></h5>
+                       <h5> <input type="radio" name="option5" value="option2">&nbsp;&nbsp;ALTER<br></h5>
+                       <h5><input type="radio" name="option5" value="option3">&nbsp;&nbsp;UPDATE<br></h5> 
+                        <h5><input type="radio" name="option5" value="correct">&nbsp;&nbsp;INSERT<br></h5>
+                        <p id="result5" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(5)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:4 <br>INSERT statement is used to add new data to a table</h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 6.Which SQL clause is used to sort the result set in ascending or descending order?
+                        </h3>
+                        
+                       <h5> <input type="radio" name="option6" value="correct">&nbsp;&nbsp;ORDER BY<br></h5>
+                       <h5> <input type="radio" name="option6" value="option1">&nbsp;&nbsp;GROUPBY<br></h5>
+                       <h5><input type="radio" name="option6" value="option2">&nbsp;&nbsp;HAVING<br></h5> 
+                        <h5><input type="radio" name="option6" value="option3">&nbsp;&nbsp;SORTBY<br></h5>
+                        <p id="result6" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(6)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:1 <br>ORDERBY clause is used to sort the result set in ascending or descending order</h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 7.Which SQL function is used to calculate the total number of rows in a table?</h3>
+                        
+                       <h5> <input type="radio" name="option7" value="correct">&nbsp;&nbsp;COUNT()<br></h5>
+                       <h5> <input type="radio" name="option7" value="option1">&nbsp;&nbsp;AVG()<br></h5>
+                       <h5><input type="radio" name="option7" value="option2">&nbsp;&nbsp;SUM()<br></h5> 
+                        <h5><input type="radio" name="option7" value="option3">&nbsp;&nbsp;MAX()<br></h5>
+                        <p id="result7" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(7)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:1 <br>COUNT() function is used to calculate the total number of rows in a table</h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 8.Which SQL command is used to delete a table from a database?</h3>
+                        
+                       <h5> <input type="radio" name="option8" value="option1">&nbsp;&nbsp;TRUNCATE<br></h5>
+                       <h5> <input type="radio" name="option8" value="option2">&nbsp;&nbsp;DELETE<br></h5>
+                       <h5><input type="radio" name="option8" value="correct">&nbsp;&nbsp;DROP<br></h5> 
+                        <h5><input type="radio" name="option8" value="option3">&nbsp;&nbsp;UPDATE<br></h5>
+                        <p id="result8" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(8)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:3 <br>DROP command is used to delete a table from a database</h5></p>
+                        </details><hr>
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 9.Which SQL clause is used to combine rows from different tables based on a related column between them?</h3>
+                        
+                       <h5> <input type="radio" name="option9" value="option1">&nbsp;&nbsp;UNION<br></h5>
+                       <h5> <input type="radio" name="option9" value="option2">&nbsp;&nbsp;WHERE<br></h5>
+                       <h5><input type="radio" name="option9" value="option3">&nbsp;&nbsp;ON<br></h5> 
+                        <h5><input type="radio" name="option9" value="correct">&nbsp;&nbsp;JOIN<br></h5>
+                        <p id="result9" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(9)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:4 <br>JOIN clause is used to combine rows from different tables based on a related column between them</h5></p>
+                        </details><hr>  
+                        
+                        
+                      </div>
+                      <div>
+                        <h3> 10.Which SQL statement is used to retrieve unique records from a table?</h3>
+                        
+                       <h5> <input type="radio" name="option10" value="option1">&nbsp;&nbsp;SELECT UNIQUE<br></h5>
+                       <h5> <input type="radio" name="option10" value="correct">&nbsp;&nbsp;SELECT DISTINCT<br></h5>
+                       <h5><input type="radio" name="option10" value="option2">&nbsp;&nbsp;SELECT ALL<br></h5> 
+                        <h5><input type="radio" name="option10" value="option3">&nbsp;&nbsp;SELECT UNIQUE ROWS<br></h5>
+                        <p id="result10" style="font-weight: bold; font-size:x-large;"></p>
+                        <!-- <button onclick="checkAnswer(2)">Submit</button> -->
+                        <span class="btn btn-"style="background-color: #7952b3; " id="join" onclick="checkAnswer(10)" style="display: inline-flex;">Submit</span>
+                        <details>
+                            <summary style="font-weight: bold; font-size: x-large;">Answer</summary>
+                            <p><h5>option:2 <br>SELECT DISTINCT Statement is used to retrieve unique records from a table</h5></p>
+                        </details>
+                        
+                        
+                      </div>
+                    </body>
+                    </html></p>
+            </div>
+        </div>
+       
+<!--  -->
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+         
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <a href="nav.html" style="color: white; text-decoration: none; font-weight: bolder;font-size: x-large;">LEVELUP</a>
+                      </div>
+                      <div class="footer-text">
+                          <p>As a mission-driven organization, we're relentlessly pursuing our vision of a world where every learner can access education to unlock their potential, without the barriers of cost or location.</p>
+                      </div>
+                      <div class="footer-social-icon">
+                          <span>Follow us</span>
+                          <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                          <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                          <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Useful Links</h3>
+                      </div>
+                      <ul id="fact">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">about</a></li>
+                          <li><a href="#">services</a></li>
+                          <li><a href="#">portfolio</a></li>
+                          <li><a href="#">Contact</a></li>
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">Our Services</a></li>
+                          <li><a href="#">Expert Team</a></li>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">Latest News</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>MAIL US</h3>
+                      </div>
+                      <div class="footer-text mb-25">
+                          <p>Don’t forgot to sending mail to us..</p>
+                      </div>
+                      <div class="subscribe-form">
+                          <form action="#">
+                              <input type="text" placeholder="Email Address">
+                              <button><i class="fab fa-telegram-plane"></i></button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="copyright-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                  <div class="copyright-text">
+                      <p>Copyright &copy; 2023, All Right Reserved LevelUp</p>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                      <ul id="fact">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Terms</a></li>
+                          <li><a href="#">Privacy</a></li>
+                          <li><a href="#">Policy</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+   
+    
+
+         
+      
+       
+    </section>
+   
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+    <script>
+      var menu = document.querySelector('.menu');
+      var menuBtn = document.querySelector('.menu button');
+      menuBtn.addEventListener('click', () => {
+          menu.classList.toggle('opened')
+      })
+  </script>
+    
+   
+</body>
+
+</html>
