@@ -39,7 +39,7 @@ function checkData(){
       
     }
     else{
-      alert("wrong");
+      alert("wrong Input please check");
     }
   }
   else{
