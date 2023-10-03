@@ -629,6 +629,7 @@ button.cta:hover {
   .main {
       flex-direction: column;
   }
+  
 
   .left,
   .right {
@@ -722,6 +723,7 @@ button.cta:hover {
   }
   .hello{
     margin-right: 30%;
+    max-width: 400px;
   }
 
   .menu.opened button {
